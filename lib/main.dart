@@ -1,501 +1,88 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const SingleChild());
+  runApp(const MyApp());
 }
 
-class SingleChild extends StatelessWidget {
-  const SingleChild({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title:  Text(
-            'التصفح العمودي والأفقي',
-            textAlign: TextAlign.right,
-          ),
-          backgroundColor: const Color.fromARGB(255, 63, 184, 109),
-        ),
-        body: SingleChildScrollView(
-          // يجعل النصوص والصفوف للجهة اليمنى
-
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children:  [
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                ],
-                              ),
-                              Column(
-                                children:  [
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                ],
-                              ),
-                              // أكمل باقي الأعمدة بنفس الطريقة
-                              Column(
-                                children:  [
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                ],
-                              ),Column(
-                                children:  [
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                ],
-                              ),Column(
-                                children:  [
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                  Text('هذا نص 1'),
-                                ],
-                              ),
-                            ],
-                          ),
-                          // أكمل باقي الصفوف بنفس الطريقة
-        Row(
-          children: [
-            Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),
-            Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),Column(
-              children:  [
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-                Text('هذا نص 1'),
-              ],
-            ),
-            ]
-        ),
-                          Row(
-                              children: [
-                                Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),
-                                Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),Column(
-                                  children:  [
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                    Text('هذا نص 1'),
-                                  ],
-                                ),
-                              ]
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      );
-
+    return const MaterialApp(
+      home: CopyPage(),
+    );
   }
 }
+
+class CopyPage extends StatefulWidget {
+  const CopyPage({super.key});
+
+  @override
+  State<CopyPage> createState() => _CopyPageState();
+}
+
+class _CopyPageState extends State<CopyPage> {
+  final TextEditingController input = TextEditingController();
+  final TextEditingController output = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              " TextField",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 5),
+            Container(
+              height: 3,
+              color: const Color.fromARGB(255, 150, 21, 21),
+            ),
+
+            const SizedBox(height: 30),
+
+            TextField(
+              controller: input,
+              decoration: const InputDecoration(
+                labelText: "Enter the Name ",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            TextField(
+              controller: output,
+              readOnly: true,
+              decoration: const InputDecoration(
+                labelText: " the name",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  output.text = input.text;
+                });
+              },
+              child: const Text("bottom "),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
