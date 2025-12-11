@@ -1,4 +1,11 @@
+
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
+import 'Homepage.dart';
+import 'Searchpage.dart';
+import 'Settingpage.dart';
+import 'Accountpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,74 +17,83 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CopyPage(),
+      debugShowCheckedModeBanner: false,
+      home: IndexPage(),
+      
     );
   }
 }
 
-class CopyPage extends StatefulWidget {
-  const CopyPage({super.key});
+class IndexPage extends StatefulWidget {
+  const IndexPage({super.key});
 
   @override
-  State<CopyPage> createState() => _CopyPageState();
+  State<IndexPage> createState() => _IndexPageState();
 }
 
-class _CopyPageState extends State<CopyPage> {
-  final TextEditingController input = TextEditingController();
-  final TextEditingController output = TextEditingController();
+class _IndexPageState extends State<IndexPage> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = const [
+    Homepage(),
+    Searchpage(),
+    Settingpage(),
+    Accountpage(),
+  ];
+
+  String _getTitle(int index) {
+    switch (index) {
+      case 0:
+        return 'الصفحة الرئيسية';
+      case 1:
+        return 'صفحة البحث';
+      case 2:
+        return 'صفحة الإعدادات';
+      case 3:
+        return 'صفحة الحساب';
+      default:
+        return 'تطبيق';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              " TextField",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+    return Directionality(
+      textDirection: TextDirection.rtl, // كل النصوص من اليمين
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(_getTitle(_selectedIndex)),
+          backgroundColor: Colors.blueGrey,
+        ),
+        body: IndexedStack(
+          index: _selectedIndex,
+          children: _pages,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          selectedItemColor: Colors.blue, // اللون الأزرق لجميع العناصر المحددة
+          unselectedItemColor: Colors.grey[600],
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'الرئيسية',
             ),
-
-            const SizedBox(height: 5),
-            Container(
-              height: 3,
-              color: const Color.fromARGB(255, 150, 21, 21),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'البحث',
             ),
-
-            const SizedBox(height: 30),
-
-            TextField(
-              controller: input,
-              decoration: const InputDecoration(
-                labelText: "Enter the Name ",
-                border: OutlineInputBorder(),
-              ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'الإعدادات',
             ),
-
-            const SizedBox(height: 20),
-
-            TextField(
-              controller: output,
-              readOnly: true,
-              decoration: const InputDecoration(
-                labelText: " the name",
-                border: OutlineInputBorder(),
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  output.text = input.text;
-                });
-              },
-              child: const Text("bottom "),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_box),
+              label: 'الحساب',
             ),
           ],
         ),
@@ -86,3 +102,6 @@ class _CopyPageState extends State<CopyPage> {
   }
 }
 
+class Homepage {
+  const Homepage();
+}
